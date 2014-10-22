@@ -1,4 +1,4 @@
 chromecast-talk
 ===============
 
-How to get started with chromcast talg
+How to get started with chromcast talk
