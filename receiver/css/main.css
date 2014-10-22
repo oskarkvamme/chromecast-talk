@@ -1,0 +1,10 @@
+.split{
+  display: inline-block;
+  vertical-align: top !important;
+  width: 45%;
+  margin-right: 10%;
+}
+
+.split.end{
+  margin-right: 0;
+}
