@@ -28,7 +28,6 @@
     messageBus.onMessage = function(event) {
       var sender = event.senderId;
       var message = event.data;
-      console.log('test');
 
       if(message.type === 'navigation'){
         navigate(message.action);

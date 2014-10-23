@@ -102,6 +102,9 @@
 					<h3>We can do more then streaming!</h3>
 					<br />
 					<h3>HTML/CSS/Javascript :)</h3>
+					<aside class="notes">
+						Games (multiplayer), info screens etc.
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
@@ -208,7 +211,6 @@ window['__onGCastApiAvailable'] = function(loaded, errorInfo) {
 
 				<section data-transition="zoom">
 					<h2>More implementation</h2>
-					<br />
 					<pre>
 						<code data-trim>
 var onInitSuccess = function() {
@@ -217,7 +219,7 @@ var onInitSuccess = function() {
 };
 						</code>
 					</pre>
-					<pre>
+					<pre class="fragment">
 						<code data-trim>
 connectButton.on('click', function(e){
   e.preventDefault();
@@ -225,19 +227,7 @@ connectButton.on('click', function(e){
 });
 						</code>
 					</pre>
-				</section>
-				<section data-transition="zoom">
-					<h2>More implementation</h2>
-					<br />
-					<pre>
-						<code data-trim>
-connectButton.on('click', function(e){
-  e.preventDefault();
-  chrome.cast.requestSession(onRequestSessionSuccess, onLaunchError);
-});
-						</code>
-					</pre>
-					<pre>
+					<pre class="fragment">
 						<code data-trim>
 var onRequestSessionSuccess = function(e){
   session = e;
@@ -293,6 +283,48 @@ messageBus.onMessage = function(event) {
 };
 						</code>
 					</pre>
+				</section>
+				<section data-transition="zoom">
+					<h2>Thats it!</h2>
+					<img src="http://media3.giphy.com/media/rxoBSOU6O0SEo/200.gif" alt="happy" />
+				</section>
+
+				<section data-transition="zoom">
+					<h2>Degugging</h2>
+					<br />
+					<p>http://CHROMECAST-IP:9222/
+				</section>
+
+				<section data-transition="zoom">
+					<h2>Media SDK</h2>
+					<pre>
+						<code data-trim>
+var mediaInfo = new chrome.cast.media.MediaInfo(currentMediaURL);
+var request = new chrome.cast.media.LoadRequest(mediaInfo);
+
+session.loadMedia(request,
+   onMediaDiscovered.bind(this, 'loadMedia'),
+   onMediaError);
+
+var onMediaDiscovered function(how, media) {
+   currentMedia = media;
+   currentMedia.play();
+}
+						</code>
+					</pre>
+				</section>
+
+				<section data-transition="zoom">
+					<h2>Urls</h2>
+					<ul>
+						<li>Documentation: <a href="https://developers.google.com/cast/">https://developers.google.com/cast/</a></li>
+						<li>Google Cast SDK Developer Console: <a href="https://cast.google.com/publish/#/overview">https://cast.google.com/publish/#/overview</a></li>
+					</ul>
+				</section>
+
+				<section data-transition="zoom">
+					<h2>Thats all Folks!</h2>
+					<img src="http://www.netanimations.net/Animated-question-mark-with-flashing-lights-picture.gif" />
 				</section>
 			</div>
 		</div>
