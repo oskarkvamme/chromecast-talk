@@ -15,8 +15,7 @@
 
   var onInitSuccess = function() {
     var connectButton = $('#connect-button');
-
-    connectButton.removeClass()
+    connectButton.removeClass('disabled');
   };
 
   var onError = function(e){
