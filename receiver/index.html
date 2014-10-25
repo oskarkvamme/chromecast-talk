@@ -49,29 +49,37 @@
 					<p>
 						<small>Oskar Kvamme / <a href="https://twitter.com/oskarkvamme">@oskarkvamme</a></small>
 					</p>
+				</section data-transition="zoom">
+				<section>
+					<h2>This is my dog!</h2>
+					<img src="millie.jpg" alt="dog" width="500" />
+					<h3>#CRAZYDOGPEOPLE</h3>
 				</section>
 
 				<section data-transition="zoom">
 					<h2>So, what is Google Cast?</h2>
-					<img src="http://img.tuttoandroid.net/wp-content/uploads/2014/06/chromecast.jpg" alt="google cast"/>
 				</section>
 
 				<section data-transition="zoom">
 					<h2>Google Cast is..</h2>
+					<img src="http://img.tuttoandroid.net/wp-content/uploads/2014/06/chromecast.jpg" alt="google cast" width="360" style="display: block; margin: 0 auto 20px auto;"/>
 					<ul>
 						<li>A streaming device/dongle</li>
-						<li class="fragment">Connected to your TV/Display (HDMI)</li>
-						<li class="fragment">WIFI</li>
-						<li class="fragment">Video</li>
-						<li class="fragment">Audio</li>
-						<li class="fragment">Cheap: 299 NOK/ 310 SEK</li>
+						<li>Connected to your TV/Display (HDMI)</li>
+						<li>WIFI</li>
+						<li>Video</li>
+						<li>Audio</li>
+						<li>Cheap: 299 NOK/ 310 SEK</li>
 					</ul>
+					<aside class="notes">
+						Streaming device, TV/Display, WIFI, Video, Audio, Cheap
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
 					<h2>How can I stream to Google Cast?</h2>
 					<ul class="fragment">
-						<li>Google Cast enabled web apps (Google Cast extension to chrome must be installed)</li>
+						<li>Google Cast enabled web apps</li>
 						<li>Google Cast enabled IOS apps</li>
 						<li>Google Cast enabled Android apps</li>
 					</ul>
@@ -85,6 +93,9 @@
 							<li>Google Music</li>
 						</ul>
 					</div>
+					<aside class="notes">
+						Receiver, Sender, Laptop works as a sender, remote control
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
@@ -93,7 +104,9 @@
 						<br />
 						<h3>Google Cast sort of runs Chrome :)</h3>
 					</div>
-
+					<aside class="notes">
+						Simple version of Chrome OS
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
@@ -127,28 +140,37 @@
 
 				<section data-transition="zoom">
 					<h2>Lets get started!</h2>
+					<aside class="notes">
+						Show how I built this presentation
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
 					<h2>Setup</h2>
 					<ul>
-						<li class="fragment">Get a device!</li>
-						<li class="fragment">Run normal setup. Easy peasy lemon squeezy :)</li>
-						<li class="fragment">NB! Remember to enable "Send this Chromecast's serial number to Google..."</li>
-						<li class="fragment">Install chromecast extension for Chrome.</li>
-						<li class="fragment">Register your device on the Google Cast SDK Developer Console(5 EUR)</li>
-						<li class="fragment">Register a new app in the Developer Console</li>
+						<li>Get a device!</li>
+						<li>Run normal setup. Easy peasy lemon squeezy :)</li>
+						<li>NB! Remember to enable "Send this Chromecast's serial number to Google..."</li>
+						<li>Install chromecast extension for Chrome.</li>
+						<li>Register your device on the Google Cast SDK Developer Console(5 EUR)</li>
+						<li>Register a new app in the Developer Console</li>
 					</ul>
+					<aside class="notes">
+						Device, Normal setup, enable "Send Chromecast serial number"
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
 					<h2>Reciver Apps</h2>
 					<ul>
-						<li class="fragment">Default Receiver</li>
-						<li class="fragment">Styled Media Receiver</li>
-						<li class="fragment">Custom Receiver</li>
-						<li class="fragment">Javascript/HTML/CSS</li>
+						<li>Default Receiver</li>
+						<li>Styled Media Receiver</li>
+						<li>Custom Receiver</li>
+						<li>Javascript/HTML/CSS</li>
 					</ul>
+					<aside class="notes">
+						Default Receiver: No registration, no styling. Custom receiver: Url to app. Can be local as long the cast can reach it.
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
@@ -175,10 +197,13 @@ castReceiverManager.start();
 				<section data-transition="zoom">
 					<h2>Sender Apps</h2>
 					<ul>
-						<li class="fragment">Android Sender (Java)</li>
-						<li class="fragment">IOS Sender (Object-C)</li>
-						<li class="fragment">Chrome Sender (Javascript/HTML/CSS)</li>
+						<li>Android Sender (Java)</li>
+						<li>IOS Sender (Object-C)</li>
+						<li>Chrome Sender (Javascript/HTML/CSS)</li>
 					</ul>
+					<aside class="notes">
+						Chrome sender. Needs google cast extension
+					</aside>
 				</section>
 
 				<section data-transition="zoom">
@@ -241,8 +266,8 @@ var onRequestSessionSuccess = function(e){
 				<section data-transition="zoom">
 					<h2>Messages</h2>
 					<ul>
-						<li class="fragment">Namespace</li>
-						<li class="fragment">urn:x-cast:chromecastappz</li>
+						<li>Namespace</li>
+						<li>urn:x-cast:chromecastappz</li>
 					</ul>
 				</section>
 
